@@ -1,0 +1,149 @@
+@import "../2-modules/header.scss";
+@import "../2-modules/tableHeader.scss";
+@import "../2-modules/tableData.scss";
+
+.datepicker_wrapper {
+    float: right;
+    overflow: hidden;
+    .date_label {
+        padding: 7px 5px 10px 10px;
+        font-size: $default_font - 2;
+    }
+    .custom_dp {
+        font-size: $default_font - 1;
+        padding: 3px;
+        border: 1px solid #ccc;
+    }
+}
+
+.search_button {
+    background: #37c4c9;
+    border: none;
+    padding: 4px 10px;
+    &:hover {
+        background: #37c4c9;
+    }
+    &:focus {
+        background: #37c4c9;
+    }
+    &.btn-primary:not(:disabled):not(.disabled):active {
+        background: #37c4c9;
+    }
+}
+
+.export_button {
+    background: transparent;
+    border: 1px solid #2e84fa;
+    color: #2e84fa;
+    padding: 4px 10px;
+}
+
+.trip_summary {
+    .trip_details {
+        padding: 10px 0px;
+        ul {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            li {
+                width: 32%;
+                border: 1px solid;
+                margin: 2px 5px 5px 0px;
+                padding: 5px 0px 5px 7px;
+                font-size: 13px;
+                float: left;
+                list-style: none;
+                color: $white;
+                border-radius: 3px;
+                &:nth-child(1) {
+                    background: #29bdc2;
+                }
+                &:nth-child(2) {
+                    background: #c2993b;
+                }
+                &:nth-child(3) {
+                    background: #005a93;
+                }
+                &:nth-child(4) {
+                    background: #00a74b;
+                }
+                &:nth-child(5) {
+                    background: #962297;
+                }
+                &:nth-child(6) {
+                    background: #6a5718;
+                }
+            }
+        }
+    }
+    .other_exp {
+        background: #2f2f2f;
+        margin: 13px 0px 13px -10px;
+        p {
+            color: $white;
+            margin: 0;
+            padding: 23px 14px;
+            font-size: $default_font - 1;
+        }
+    }
+}
+
+.trip_details_container{
+    background: $white;
+    padding: 0px 0px 5px 0px;
+    border-bottom: 1px solid #ccc;
+    margin: 5px 0px 20px 0px;
+    .list_heading_wrapper{
+        background: $navblue;
+        color: #fff;
+        padding: 5px;
+        .list_box_heading{
+            margin: 0px;
+            font-size: $default_font - 1;
+            .total_km{
+                color: #0DDBF7;
+            }
+            .total_exp{
+                color: #CACA47;
+            }
+        }
+    }
+    .inside_trip_container{
+        .trip_details_wrapper{
+            padding: 12px 8px;
+        }
+    }
+}
+
+
+@include mobile{
+    .trip_details_wrapper{
+        width: 100%;
+        overflow-x:scroll;
+    }
+    .trip_summary{
+        .trip_details{
+            ul{
+                li{
+                    width: 100%;
+                }
+            }
+        }
+        .other_exp{
+            margin: 0;
+        }
+        
+    }
+    .datepicker_wrapper {
+        width: 100%;
+        .react-datepicker-wrapper{
+            display: block;
+        }
+        .date_label{
+            padding: 7px 5px 10px 0px;
+        }
+        .search_button{
+            margin: 10px 0;
+        }
+    }
+}

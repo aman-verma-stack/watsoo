@@ -1,0 +1,11 @@
+.list_data{
+    font-size: $default_font - 2;
+    padding: 5px 14px;
+    .custom_button{
+        background: #37C4C9;
+        border: none;
+    }
+    .info_circle{
+        float: right;
+    }
+}

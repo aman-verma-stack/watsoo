@@ -1,0 +1,18 @@
+@import '../1-base/base';
+
+.header {
+    .header_back{
+        background: $navblue;
+        .fa-bars{
+            color: #fff;
+        }
+        .logo {
+            width: 132px;
+        }
+        .logout_button{
+            background: #fff;
+            color: #333;
+        }
+    }
+    
+}

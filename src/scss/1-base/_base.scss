@@ -1,0 +1,62 @@
+@import "../4-variables/variables";
+@import "../4-variables/mixins";
+
+body {
+    background: $bodyColor !important;
+    .f_left{
+        float: left;
+    }
+    .text_skyblue{
+        color: #37C4C9;
+    }
+    .main_container {
+        padding: 29px 30px;
+    }
+    .first_heading {
+        font-size: $third_heading;
+        margin: 0px;
+    }
+    .bredcrums {
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+        li {
+            list-style: none;
+            float: left;
+            font-size: $default_font - 2;
+            padding: 0px 6px 0px 0px;
+            &:first-child {
+                color: #29bdc2;
+                &::after {
+                    content: "/";
+                    padding: 0px 0px 0px 6px;
+                    color: #777;
+                }
+            }
+        }
+    }
+    .custom_button {
+        font-size: $default_font - 2;
+        margin: 0px 2px 0px 9px;
+        &:hover{
+            outline: none;
+            box-shadow: none;
+        }
+        &:focus{
+            outline: none;
+            box-shadow: none;
+        }
+        &.btn-primary:not(:disabled):not(.disabled):active{
+            outline: none;
+            box-shadow: none;
+        }
+    }
+}
+
+@include mobile{
+    body{
+        .main_container{
+            padding: 10px;
+        }
+    }
+}
